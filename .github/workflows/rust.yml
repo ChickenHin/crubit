@@ -95,7 +95,7 @@ jobs:
         cmake -B build -S . $LAUNCHER_FLAGS
         cmake --build build --parallel
         cd build
-        ctest --output-on-failure --parallel 2
+        ctest --output-on-failure --parallel 2 -V
     - name: Show sccache stats
       if: steps.install_sccache.outcome == 'success' && always()
       run: sccache --show-stats
