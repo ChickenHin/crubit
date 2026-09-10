@@ -39,5 +39,6 @@ add_executable(main main.cpp)
 target_link_libraries(main PRIVATE rust_lib)
 
 if (BUILD_TESTING)
-  add_test(NAME main-test COMMAND main)
+  include(GoogleTest)
+  gtest_discover_tests(main)
 endif()
