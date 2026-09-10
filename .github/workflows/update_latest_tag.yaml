@@ -4,9 +4,9 @@
 name: Update Latest Tag
 
 on:
-  schedule:
-    # Run daily at 03:00 UTC
-    - cron: '0 3 * * *'
+  # schedule:
+  #   # Run daily at 03:00 UTC
+  #   - cron: '0 3 * * *'
   workflow_dispatch: # Allows manual triggering from the GitHub Actions UI for testing
 
 permissions:
